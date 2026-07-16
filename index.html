@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="directory-wrapper">
+    <header class="directory-header">
+      <h1>Link Directory</h1>
+      <p>Use this page to organize your links like a file system. Add folders and links below.</p>
+    </header>
+
+    <section class="directory">
+      <ul>
+        <li class="folder open">
+          <button class="folder-toggle" aria-label="Toggle Cool Stuff folder">Cool Stuff</button>
+          <ul>
+            <li class="file"><a href="https://meep809.github.io/skyline-cable/" target="_blank" rel="noopener">Skyline-Cable</a></li>
+            <li class="file"><a href="https://meep809.github.io/links/" target="_blank" rel="noopener">Links</a></li>
+          </ul>
+        </li>
+
+        <li class="folder open">
+          <button class="folder-toggle" aria-label="Toggle Games folder">Games</button>
+          <ul>
+            <li class="file"><a href="https://meep809.github.io/umbrion/" target="_blank" rel="noopener">Umbrion</a></li>
+            <li class="file"><a href="https://meep809.github.io/infinity/" target="_blank" rel="noopener">Infinity UG</a></li>
+            <li class="file"><a href="https://meep809.github.io/eagchoose/" target="_blank" rel="noopener">Eaglercraft</a></li>
+          </ul>
+        </li>
+
+        <li class="folder">
+          <button class="folder-toggle" aria-label="Toggle Other Things folder">Other Things</button>
+          <ul>
+            <li class="file"><a href="https://meep809.github.io/" target="_blank" rel="noopener">Home Page</a></li>
+            <li class="file"><a href="https://meep809.github.io/blog/" target="_blank" rel="noopener">Blog Posts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Add new folders by copying a folder block, and add links inside each folder using <code>&lt;li class="file"&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;</code>.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll(".folder-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        button.parentElement.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>
